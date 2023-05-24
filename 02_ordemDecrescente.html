@@ -5,10 +5,31 @@
     */
 
     //ENTRADA
+    const n1 = Number(prompt("insira um número").trim().replace(",", "."));
+    const n2 = Number(prompt("insira um segundo número").trim().replace(",", "."));
+    const n3 = Number(prompt("insira um terceiro número").trim().replace(",", "."));
 
-    
     //PROCESSAMENTO
-    
+    if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
+        alert(`Por favor, coloque números válidos.`);
+    } else {
+        if (n1 == n2 || n1 == n3 || n2 == n3) {
+            alert(`coloque números diferentes`)
+        } else if (n1 > n2 && n2 > n3) {
+            alert(`A ordem dos números são ${n1} , ${n2} e ${n3}`).replace(".", ",")
+        } else if (n1 > n3 && n3 > n2) {
+            alert(`A ordem dos números são ${n1} , ${n3} e ${n2}`).replace(".", ",")
+        } else if (n2 > n1 && n1 > n3) {
+            alert(`A ordem dos números são ${n2} , ${n1} e ${n3}`).replace(".", ",")
+        } else if (n2 > n3 && n3 > n1) {
+            alert(`A ordem dos números são ${n2} , ${n3} e ${n1}`).replace(".", ",")
+        } else if (n3 > n1 && n1 > n2) {
+            alert(`A ordem dos némeros são ${n3} , ${n1} e ${n2}`).replace(".", ",")
+        } else if (n3 > n2 && n2 > n1) {
+            alert(`A ordem dos números são ${n3} , ${n2} e ${n1}`).replace(".", ",")
+        }
+        
+    }
     //SAÍDA
     
 </script>

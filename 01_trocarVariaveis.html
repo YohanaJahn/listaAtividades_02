@@ -5,9 +5,19 @@
     Em seguida, troque o valor das variáveis, invertendo e exibindo o antes e o depois em uma janela de alert.
     */
 
-    //ENTRADA
-
+   //ENTRADA
+    let num1 = Number(prompt("insira um número INTEIRO.").trim());
+    let num2 = Number(prompt("insira outro número INTEIRO.").trim());
     //PROCESSAMENTO
+    if (isNaN(num1) || isNaN(num2)) {
+        alert(`um dos seus valores não é um número`)
+    } else {
+        const num3 = num1
+        num1 = num2
+        num2 = num3
+        alert(`valores antigos do número 1 é ${num2} e número 2 é ${num1}`)
+        alert(`valores novos do número 1 é ${num1} e  número 2 é ${num2}`)
+    }
 
     //SAÍDA
 
