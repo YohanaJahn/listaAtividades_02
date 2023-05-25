@@ -11,10 +11,21 @@
     */
 
     //ENTRADA
-
-
+    const num1 = Number(prompt("Insira um númeoro INTEIRO MENOR QUE 1000").trim());
     //PROCESSAMENTO
+    const centenas = Math.floor (num1 / 100)
+    const dezenas = Math.floor ((num1 % 100) / 10)
+    const unidades = num1 % 10
 
+    if (num1 >= 1000){
+        alert(`Inválido`);
+    } else if( num1 >= 100){
+        alert(`A ${centenas} centenas, ${dezenas} dezenas, e ${unidades} unidades.`);
+    } else if ( num1 > 9 && num1 <= 99){
+        alert(`A ${dezenas} dezenas e ${unidades} unidades`);
+    } else if ( num1 >= 1){
+        alert(`A ${unidades} unidades`);
+    }
     
     //SAÍDA
 
