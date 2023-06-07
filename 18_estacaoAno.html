@@ -5,11 +5,45 @@
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
+   
     //ENTRADA
-
+    const lugar = prompt("Informe em que hemisfério está (Informe N pra Norte ou S para Sul)").toUpperCase();
+    const mes = prompt("Informe o mês atual.").toLowerCase();
 
     //PROCESSAMENTO
-
+    if (lugar.length > 1) {
+        alert(`Valor inválido.`);
+    }
+    else {
+        if (lugar === "N") {
+            if (mes === "dezembro" || mes === "janeiro" || mes === "fevereiro") {
+                alert(`Você está no inverno.`);
+            }
+            else if (mes === "março" || mes === "abril" || mes === "maio") {
+                alert(`Você está na primavera.`);
+            }
+            else if (mes === "junho" || mes === "julho" || mes === "agosto") {
+                alert(`Você está no verão.`);
+            }
+            else if (mes === "setembro" || mes === "outubro" || mes === "novembro") {
+                alert(`Você está no outono.`);
+            }
+        }
+        if (lugar === "S") {
+            if (mes === "dezembro" || mes === "janeiro" || mes === "fevereiro") {
+                alert(`Você está no verão.`);
+            }
+            else if (mes === "março" || mes === "abril" || mes === "maio") {
+                alert(`Você está no outono.`);
+            }
+            else if (mes === "junho" || mes === "julho" || mes === "agosto") {
+                alert(`Você está no inverno.`);
+            }
+            else if (mes === "setembro" || mes === "outubro" || mes === "novembro") {
+                alert(`Você está na primavera.`);
+            }
+        }
+    }
     
     //SAÍDA
 

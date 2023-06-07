@@ -9,9 +9,29 @@
     // Entre 5.9 e zero            E
 
     // Entrada
-
-    
+    const nota = Number (prompt("Informe uma nota, de 0 a 10.").replace(",", "."));
     // Processamento
+    if (isNaN(nota) || nota > 10.0) {
+        alert(`Valor inválido.`);
+    }
+    else {
+        if (nota >= 9.0) {
+            alert(`Conceito A`);
+        }
+        else if (nota < 9.0 && nota >= 8.0 ) {
+            alert(`Conceito B`);
+        }
+        else if (nota < 8.0 && nota >= 7.0) {
+            alert(`Conceito C`);
+        }
+        else if (nota < 7.0 && nota >= 6.0) {
+            alert (`Conceito D`);
+        }
+        else if (nota < 6.0) {
+            alert (`Conceito E`)
+        }
+    }
+    
 
     
     // Saída
