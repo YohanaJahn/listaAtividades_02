@@ -1,17 +1,24 @@
 <script>
-    /*
+  /*
     //PROBLEMA
     Faça um script que peça um número e informe se o número é inteiro ou decimal.
     Dica: utilize uma função de arredondamento.
     */
 
-    //ENTRADA
+  //ENTRADA
+  const num = Number(
+    prompt("Informe um número qualquer.").replace(",", ".").trim()
+  );
 
-
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
-
-
+  //PROCESSAMENTO
+  if (isNaN(num)) {
+    alert(`Valor inválido.`);
+  } else {
+    if (num % 1 === 0) {
+      alert(`Número é inteiro.`);
+    } else {
+      alert(`Número é decimal.`);
+    }
+  }
+  //SAÍDA
 </script>

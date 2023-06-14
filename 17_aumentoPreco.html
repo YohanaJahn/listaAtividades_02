@@ -7,11 +7,31 @@
         //- acima de 1500: aumento de 5 %
     
     // Entrada
+    let preço = Number(prompt(`Informe um preço qualquer.`).replace(",", ".").trim());
 
-    
     // Processamento
+    if (isNaN(preço)) {
+        alert(`Valor inválido.`);
+    }
+    else {
+        if (preço <= 280) {
+            preço = preço + (preço * 0.20);
+            alert(`O novo preço é de R$${preço.toFixed(2).replace(".", ",")}`);
+        }
+        else if (preço > 280 || preço <= 700) {
+            preço = preço + (preço * 0.15);
+            alert(`O novo preço é de R$${preço.toFixed(2).replace(".", ",")}`);
+        }
+        else if (preço > 700 || preço <= 1500) {
+            preço = preço + (preço * 0.10);
+            alert(`O novo preço é de R$${preço.toFixed(2).replace(".", ",")}`);
+        }
+        else {
+            preço = preço + (preço * 0.5);
+            alert(`O novo preço é de R$${preço.toFixed(2).replace(".", ",")}`);
+        }
+    }
 
-    
     // Saída
 
 </script>
