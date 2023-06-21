@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
       //PROBLEMA
       Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
       - par ou ímpar;
@@ -7,108 +7,46 @@
       - inteiro ou decimal.
       */
 
-    //ENTRADA
-    const num1 = Number(prompt("Informe um número "));
-    const operacao = prompt("Insira a operação que deseja, + , - , / ou * ");
-    const num2 = Number(prompt("Informe outro número"));
-    //PROCESSAMENTO
-    let mensagemFinal = `o resultado será `;
-    if (isNaN(num1) || isNaN(num2)) {
-      alert(`Valor inválido encontrado.`);
+  //ENTRADA
+  const num1 = Number(prompt("Informe um número "));
+  const operacao = prompt("Insira a operação que deseja, + , - , / ou * ");
+  const num2 = Number(prompt("Informe outro número"));
+  //PROCESSAMENTO
+  let mensagemFinal = `o resultado será `;
+  if (isNaN(num1) || isNaN(num2)) {
+    alert(`Valor inválido.`);
+  } else {
+    if (operacao === "+") {
+      num3 = num1 + num2;
+      mensagemFinal = mensagemFinal + num3;
+    } else if (operacao === "/") {
+      num3 = num1 / num2;
+      mensagemFinal = mensagemFinal + num3;
+    } else if (operacao === "*") {
+      num3 = num1 * num2;
+      mensagemFinal = mensagemFinal + num3;
+    } else if (operacao === "-" || "menos") {
+      num3 = num1 - num2;
+      mensagemFinal = mensagemFinal + num3;
+    } else {
+      alert("Operaçao Inválida");
     }
-      else {
-          if (operacao === "+") {
-              const num3 = num1 + num2;
-              mensagemFinal = mensagemFinal + num3;
-              if (num3 % 2 == 0) {
-                  mensagemFinal = mensagemFinal + `sendo par, `;
-              }
-              else {
-                  mensagemFinal = mensagemFinal + `sendo ímpar, `;
-              }
-              if (num3 % 1 === 0) {
-                  mensagemFinal = mensagemFinal + `inteiro e `;
-              }
-              else {
-                  mensagemFinal = mensagemFinal + `decimal e `;
-              }
-              if (num3 >= 0) {
-                  mensagemFinal = mensagemFinal + `positivo.`;
-              }
-              else {
-                  mensagemFinal = mensagemFinal + `negativo.`;
-              }
-              alert(mensagemFinal);
-          }
-          else if (operacao === "/") {
-              const num3 = num1 / num2;
-              mensagemFinal = mensagemFinal + num3;
-              if (num3 % 2 == 0) {
-                  mensagemFinal = mensagemFinal + ` sendo par, `;
-              }
-              else {
-                  mensagemFinal = mensagemFinal + ` sendo ímpar, `;
-              }
-              if (num3 % 1 === 0) {
-                  mensagemFinal = mensagemFinal + `inteiro e `;
-              }
-              else {
-                  mensagemFinal = mensagemFinal + `decimal e `;
-              }
-              if (num3 >= 0) {
-                  mensagemFinal = mensagemFinal + `positivo.`;
-              }
-              else {
-                  mensagemFinal = mensagemFinal + `negativo.`;
-              }
-              alert(mensagemFinal);
-          }
-          if (operacao === "*") {
-              const num3 = num1 * num2;
-              mensagemFinal = mensagemFinal + num3;
-              if (num3 % 2 == 0) {
-                  mensagemFinal = mensagemFinal + ` sendo par, `;
-              }
-              else {
-                  mensagemFinal = mensagemFinal + ` sendo ímpar, `;
-              }
-              if (num3 % 1 === 0) {
-                  mensagemFinal = mensagemFinal + `inteiro e `;
-              }
-              else {
-                  mensagemFinal = mensagemFinal + `decimal e `;
-              }
-              if (num3 >= 0) {
-                  mensagemFinal = mensagemFinal + `positivo.`;
-              }
-              else {
-                  mensagemFinal = mensagemFinal + `negativo`;
-              }
-              alert(mensagemFinal);
-          }
-          else if (operacao === "-" || "menos") {
-              const num3 = num1 - num2;
-              mensagemFinal = mensagemFinal + num3;
-              if (num3 % 2 == 0) {
-                  mensagemFinal = mensagemFinal + ` sendo par, `;
-              }
-              else {
-                  mensagemFinal = mensagemFinal + ` sendo ímpar, `;
-              }
-              if (num3 % 1 === 0) {
-                  mensagemFinal = mensagemFinal + `inteiro e `;
-              }
-              else {
-                  mensagemFinal = mensagemFinal + `decimal e `;
-              }
-              if (num3 >= 0) {
-                  mensagemFinal = mensagemFinal + `positivo.`;
-              }
-              else {
-                  mensagemFinal = mensagemFinal + `negativo.`;
-              }
-              alert(mensagemFinal);
-          }
-      }
+    if (num3 % 2 == 0) {
+      mensagemFinal = mensagemFinal + ` sendo par, `;
+    } else {
+      mensagemFinal = mensagemFinal + ` sendo ímpar, `;
+    }
+    if (num3 % 1 === 0) {
+      mensagemFinal = mensagemFinal + `inteiro e `;
+    } else {
+      mensagemFinal = mensagemFinal + `decimal e `;
+    }
+    if (num3 >= 0) {
+      mensagemFinal = mensagemFinal + `positivo.`;
+    } else {
+      mensagemFinal = mensagemFinal + `negativo.`;
+    }
+    alert(mensagemFinal);
+  }
   //SAÍDA
 </script>
